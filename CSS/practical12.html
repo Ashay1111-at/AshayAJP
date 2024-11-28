@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <title>Simple Form Validation</title>
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+
+      if (!/^[A-Za-z\s]+$/.test(name)) {
+        alert("Invalid name! Use letters only.");
+        return false;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Invalid email address!");
+        return false;
+      }
+      if (!/^\d{10}$/.test(phone)) {
+        alert("Phone number must be 10 digits.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h2>Simple Form</h2>
+  <form onsubmit="return validateForm()">
+    <label>Name: <input type="text" id="name"></label><br><br>
+    <label>Email: <input type="text" id="email"></label><br><br>
+    <label>Phone: <input type="text" id="phone"></label><br><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

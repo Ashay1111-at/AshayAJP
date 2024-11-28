@@ -1,0 +1,34 @@
+<html>
+<script>
+function readonly_element() {
+  document.forms.frn1.t1.readOnly = true;
+}
+
+function enter() {
+  document.forms.frn1.t1.readOnly = false;
+}
+
+function disable_elemnt() { 
+  document.forms.frn1.t2.disabled = true;
+}
+
+function enable_element() {
+  document.forms.frn1.t2.disabled = false;
+}
+</script>
+<body>
+<form name="frn1">
+  <h3>READONLY</h3>
+  <b>Enter Your Name:</b>
+  <input type="text" name="t1" value=""><br><br>
+  <input type="button" value="Read Only" onclick="readonly_element()">
+  <input type="button" value="Write" onclick="enter()"> <br><br>
+
+  <h3>DISABLE</h3>
+  <b>Enter City:</b>
+  <input type="text" name="t2" value=""><br><br>
+  <input type="button" value="Disable" onclick="disable_elemnt()"> 
+  <input type="button" value="Enable" onclick="enable_element()">
+</form>
+</body>
+</html>

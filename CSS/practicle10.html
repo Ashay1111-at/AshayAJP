@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <title>Cookie Creator</title>
+</head>
+<body>
+  <h1>Cookie Creator</h1>
+  <button onclick="createCookie('sessionCookie', 'IAmASessionCookie')">Create Session Cookie</button>
+  <button onclick="createCookie('persistentCookie', 'IAmAPersistentCookie', 7)">Create Persistent Cookie</button>
+  <h2>Current Cookies</h2>
+  <pre id="cookieDisplay">No cookies found.</pre>
+  <script>
+    function createCookie(name, value, days = 0) {
+      let cookie = `${name}=${value}; path=/`;
+      if (days > 0) {
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        cookie += `; expires=${date.toUTCString()}`;
+      }
+      document.cookie = cookie;
+      updateCookieDisplay();
+    }
+
+    function updateCookieDisplay() {
+      document.getElementById('cookieDisplay').textContent = document.cookie || "No cookies found.";
+    }
+
+    window.onload = updateCookieDisplay;
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<title>AT pr 8</title>
+<head>
+<script>
+function display()
+{
+  document.forms.frm1.t2.value="Text value selected";
+}
+function show()
+{
+  document.forms.frm1.t2.value="Text value change";
+}
+</script>
+</head>
+
+<body>
+<form name="frm1">
+<input type="text" name="t1" value="Welcome to Poly" onselect="display()" onchange="show()">
+<br> <br>
+<input type="text" name="t2" value="">
+</form>
+</body>
+</html>

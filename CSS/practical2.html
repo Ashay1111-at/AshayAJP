@@ -1,0 +1,37 @@
+<html >
+<title>Looping demo</title>
+<body>
+<script >
+var ch=parseInt(prompt("Enter your choice: \n 0.odd\n1.even")); 
+switch(ch)
+{
+  case 1:
+  var n=parseInt(prompt("Enter the number upto you want even numbers"));
+ document.write("<br> Even numbers from 0 to "+n+" are :");
+  for(var i=0;i<=n;i++)
+  { 
+    if(i%2==0) 
+   {
+     document.write(" "+i);
+
+   }
+  }
+  break;
+  case 0:
+  var n=parseInt(prompt("Enter the number upto you want odd numbers")); 
+  document.write("<br> Odd numbers from 0 to "+n+" are :");
+  for(var i=0;i<=n;i++)
+  {
+    if(i%2==1)
+  {
+   document.write(" "+i);
+  }
+ }
+   break;
+   default:
+   alert("Invalid choice!!");
+  }
+</script>
+</body>
+</html>
+

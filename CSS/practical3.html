@@ -1,0 +1,43 @@
+<html>
+<title>Practical 3</title>
+<body>
+<script>
+var strArray=new Array("Ashay","Aniket","Chetan","Tanmay","Piyush") 
+var numArray=new Array(10,15,22.5,56,17,88);
+document.write("<br> Original String Array elements are : "+strArray);
+ document.write("<br> Original Numeric Array elements are : "+numArray);
+
+document.write("<br> Length String Array elements are : "+strArray.length);
+ document.write("<br> Length Numeric Array elements are : "+numArray.length);
+
+document.write("<br> Sorted Numeric Array elements are : "+numArray.sort());
+ document.write("<br> Sorted String Array elements are : "+strArray.sort());
+
+numArray.push(55);
+document.write("<br> New Numeric Array elements after push() : "+numArray); 
+strArray.push("Kartik");
+document.write("<br> New String Array elements after push() : "+strArray);
+
+numArray.shift();
+document.write("<br> New Numeric Array elements after shift() : "+numArray); 
+strArray.shift();
+document.write("<br> New String Array elements after shift() : "+strArray);
+
+numArray.unshift(2);
+document.write("<br> New Numeric Array elements after unshift() : "+numArray);
+ strArray.unshift("Ojas");
+document.write("<br> New String Array elements after unshift() : "+strArray);
+
+numArray.pop();
+document.write("<br> New Numeric Array elements after pop() : "+numArray); 
+strArray.pop();
+document.write("<br> New String Array elements after pop() : "+strArray);
+
+numArray.splice(2,0,55,87,33,58);
+document.write("<br> New Numeric Array elements after splice() : "+numArray); 
+strArray.splice(3,3);
+document.write("<br> New String Array elements after splice() : "+strArray);
+
+</script>
+</body>
+</html>
